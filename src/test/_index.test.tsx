@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
 
-import { Teste } from '.';
+import { Teste } from '../pages';
 import { renderWithTheme } from '../utils/tests/helpers';
 
 describe('<PageComponent />', () => {
