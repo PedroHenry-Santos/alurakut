@@ -5,9 +5,16 @@ const theme = extendTheme({
     initialColorMode: 'light',
     useSystemColorMode: false
   },
+  styled: {},
   fonts: {
     heading: 'Rubik',
     body: 'Rubik'
+  },
+  breakpoints: {
+    sd: '400px',
+    md: '800px',
+    lg: null,
+    xl: null
   },
   colors: {
     gray: {
