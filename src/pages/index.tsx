@@ -4,6 +4,7 @@ import { Box, Grid, GridItem } from '@chakra-ui/react';
 import { NextPage } from 'next';
 
 import { BgHeader } from '../components/BgHeader';
+import { ProfileSidebarBox } from '../components/ProfileSidebar';
 
 const PageComponent: React.FC<NextPage> = () => {
   return (
@@ -13,8 +14,10 @@ const PageComponent: React.FC<NextPage> = () => {
           templateColumns={{ base: '1fr', md: '10rem 1fr 20rem' }}
           gap={{ base: '4', md: '2.5' }}
         >
-          <GridItem colSpan={1} d={{ base: 'none', md: 'block' }}></GridItem>
-          <GridItem colSpan={1} w="full" p="4">
+          <GridItem colSpan={1} d={{ base: 'none', md: 'block' }} pt="4">
+            <ProfileSidebarBox githubUser="Pedrohenry-Santos" />
+          </GridItem>
+          <GridItem colSpan={1} w="full" pt="4">
             <BgHeader
               user={'Pedro'}
               props={{
