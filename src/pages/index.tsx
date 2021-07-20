@@ -1,18 +1,40 @@
 import React from 'react';
 
-import { Heading } from '@chakra-ui/react';
+import { Box, Grid, GridItem } from '@chakra-ui/react';
 import { NextPage } from 'next';
 
-export const Teste = () => (
-  <Heading size="2xl" color="red.200">
-    Olá mundo
-  </Heading>
-);
+import { BgHeader } from '../components/BgHeader';
+import { ProfileSidebarBox } from '../components/ProfileSidebar';
 
 const PageComponent: React.FC<NextPage> = () => {
   return (
     <>
-      <Teste />
+      <Box maxWidth="container.lg" h="100vh" m="auto">
+        <Grid
+          templateColumns={{ base: '1fr', md: '10rem 1fr 20rem' }}
+          gap={{ base: '4', md: '2.5' }}
+        >
+          <GridItem colSpan={1} d={{ base: 'none', md: 'block' }} pt="4">
+            <ProfileSidebarBox githubUser="Pedrohenry-Santos" />
+          </GridItem>
+          <GridItem colSpan={1} w="full" pt="4">
+            <BgHeader
+              user={'Pedro'}
+              props={{
+                message: 10,
+                photos: 13,
+                videos: 7,
+                fans: 45,
+                posts: 12,
+                reliable: 3,
+                cool: 3,
+                sexy: 2
+              }}
+            />
+          </GridItem>
+          <GridItem colSpan={1}></GridItem>
+        </Grid>
+      </Box>
     </>
   );
 };
